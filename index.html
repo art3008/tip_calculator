@@ -15,19 +15,27 @@
             <h2>Tip calculator</h2>
             <label for="amount">Bill Amount</label>
             <input type="number" id="amount">
+            <br>
+            <br>
             <label for="guests">Number of Guests</label>
             <input type="number" id="guests">
+            <br>
+            <br>
             <label for="service">Service Quality</label>
             <select id="service">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
+                <option disabled selected value="0">Choose...</option>
+                <option value="0.3">30% - Outstanding</option>
+                <option value="0.2">20% - Good</option>
+                <option value="0.15">15% - It was ok</option>
+                <option value="0.1">10% - Bad</option>
+                <option value="0.05">5% - Terrible</option>
             </select>
             <div class="calc_btn">
-                <button id="calc">Calculate</button>
+                <button id="calc" onclick="getResult()">Calculate</button>
             </div>
-            
         </div>
+
+        <div id="result"></div>
     </div>
     <script src="./script.js"></script>
 </body>
